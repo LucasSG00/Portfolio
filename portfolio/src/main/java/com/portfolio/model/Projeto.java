@@ -27,12 +27,12 @@ public class Projeto {
 	@NotNull
 	private String descricao;
 	
-	@OneToMany(mappedBy = "imagem", cascade = CascadeType.ALL)
-	@JsonIgnoreProperties("imagem")
+	@OneToMany(mappedBy = "projeto", cascade = CascadeType.ALL)
+	@JsonIgnoreProperties("projeto")
 	private List<Imagem> imagens;
 
-	@OneToMany(mappedBy = "linguagem", cascade = CascadeType.ALL)
-	@JsonIgnoreProperties("linguagem")
+	@OneToMany(mappedBy = "projeto", cascade = CascadeType.ALL)
+	@JsonIgnoreProperties("projeto")
 	private List<Linguagem> linguagens;
 	
 	public long getIdProjeto() {

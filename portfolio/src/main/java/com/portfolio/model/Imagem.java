@@ -1,6 +1,9 @@
 package com.portfolio.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
@@ -11,6 +14,10 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @Table(name= "tb_imagem")
 public class Imagem {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long idImagem;
+	
 	@NotNull
 	private Long id_projeto;
 
@@ -54,6 +61,14 @@ public class Imagem {
 
 	public void setProjeto(Projeto projeto) {
 		this.projeto = projeto;
+	}
+
+	public long getIdImagem() {
+		return idImagem;
+	}
+
+	public void setIdImagem(long idImagem) {
+		this.idImagem = idImagem;
 	}
 	
 }
