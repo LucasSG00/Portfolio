@@ -1,13 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { ContatoComponent } from './contato/contato.component';
+import { SobreComponent } from './sobre/sobre.component';
+import { ProjetoComponent } from './projeto/projeto.component';
+import { MenuComponent } from './menu/menu.component';
+import { LogoComponent } from './logo/logo.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    ContatoComponent,
+    SobreComponent,
+    ProjetoComponent,
+    MenuComponent,
+    LogoComponent
   ],
   imports: [
     BrowserModule,
