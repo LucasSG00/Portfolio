@@ -9,7 +9,6 @@ import { ContatoComponent } from './contato/contato.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { ProjetoComponent } from './projeto/projeto.component';
 import { MenuComponent } from './menu/menu.component';
-import { LogoComponent } from './logo/logo.component';
 
 @NgModule({
   declarations: [
@@ -18,8 +17,7 @@ import { LogoComponent } from './logo/logo.component';
     ContatoComponent,
     SobreComponent,
     ProjetoComponent,
-    MenuComponent,
-    LogoComponent
+    MenuComponent
   ],
   imports: [
     BrowserModule,
