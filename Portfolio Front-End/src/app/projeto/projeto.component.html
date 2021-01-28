@@ -32,17 +32,15 @@
 
 </div>
 
-<div class="row d-flex justify-content-center w-100 my-5" id="projetos">
+<div class="row d-flex justify-content-center w-100 my-5" id="projetos" *ngFor='let card of listaProjetos'>
 
     <div class="col-md-4 py-4">
-        <h3 class="card-title text-center">Portfolio</h3>
-        <p class="card-text align-middle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate deserunt
-            natus cum, fugit laborum veritatis officiis alias in sed excepturi voluptatibus aspernatur
-            velit autem at vitae molestias voluptatem non perferendis.</p>
+        <h3 class="card-title text-center">{{ card.titulo }}</h3>
+        <p class="card-text align-middle">{{ card.descricao }} </p>
     </div>
 
-    <div class="col-md-4 d-flex justify-content-center">
-        <img class="mh-100 mw-100" src="https://i.imgur.com/Hwhre7s.png" alt="">
+    <div class="col-md-4 d-flex justify-content-center" >
+        <img class="mh-100 mw-100" src="{{ card.imgPrincipal }}" alt="">
     </div>
 
 </div>
