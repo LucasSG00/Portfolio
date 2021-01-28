@@ -12,6 +12,6 @@ public interface LinguagemRepository extends JpaRepository<Linguagem, Long> {
 	
 	public List<Linguagem> findAllByNome(String nome);
 	
-	public Long deleteByNome(String nome);
+//	public Long deleteByNome(String nome);
 
 }

@@ -36,19 +36,19 @@ public class LinguagemController {
 		return ResponseEntity.ok(repository.findAllByNome(nome));
 	}
 	
-	@PostMapping
-	public ResponseEntity<Linguagem> post(@RequestBody Linguagem linguagem){
-		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(linguagem));
-	}
-	
-	@PutMapping
-	public ResponseEntity<Linguagem> put(@RequestBody Linguagem linguagem){
-		return ResponseEntity.status(HttpStatus.OK).body(repository.save(linguagem));
-	}
-	
-	@DeleteMapping("/{nome}")
-	public void delete(@PathVariable String nome) {
-		repository.deleteByNome(nome);
-	}
+//	@PostMapping
+//	public ResponseEntity<Linguagem> post(@RequestBody Linguagem linguagem){
+//		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(linguagem));
+//	}
+//	
+//	@PutMapping
+//	public ResponseEntity<Linguagem> put(@RequestBody Linguagem linguagem){
+//		return ResponseEntity.status(HttpStatus.OK).body(repository.save(linguagem));
+//	}
+//	
+//	@DeleteMapping("/{nome}")
+//	public void delete(@PathVariable String nome) {
+//		repository.deleteByNome(nome);
+//	}
 
 }

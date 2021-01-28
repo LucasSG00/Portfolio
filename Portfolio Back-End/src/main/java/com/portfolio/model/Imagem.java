@@ -17,9 +17,6 @@ public class Imagem {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long idImagem;
-	
-	@NotNull
-	private Long id_projeto;
 
 	@NotNull
 	private String nome;
@@ -31,14 +28,6 @@ public class Imagem {
 	@JsonIgnoreProperties ("imagem")
 	private Projeto projeto;
 	
-	public Long getId_projeto() {
-		return id_projeto;
-	}
-
-	public void setId_projeto(Long id_projeto) {
-		this.id_projeto = id_projeto;
-	}
-
 	public String getNome() {
 		return nome;
 	}

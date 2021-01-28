@@ -19,23 +19,12 @@ public class Linguagem {
 	private long idLinguagem;
 	
 	@NotNull
-	private Long id_projeto;
-	
-	@NotNull
 	private String nome;
 
 	@ManyToOne
 	@JsonIgnoreProperties ("linguagem")
 	private Projeto projeto;
 	
-	public Long getId_projeto() {
-		return id_projeto;
-	}
-
-	public void setId_projeto(Long id_projeto) {
-		this.id_projeto = id_projeto;
-	}
-
 	public String getNome() {
 		return nome;
 	}

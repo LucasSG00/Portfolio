@@ -36,19 +36,19 @@ public class ProjetoController {
 		return ResponseEntity.ok(repository.findAllByTituloContainingIgnoreCase(titulo));
 	}
 	
-	@PostMapping
-	public ResponseEntity<Projeto> post(@RequestBody Projeto projeto){
-		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(projeto));
-	}
-	
-	@PutMapping
-	public ResponseEntity<Projeto> put(@RequestBody Projeto projeto){
-		return ResponseEntity.status(HttpStatus.OK).body(repository.save(projeto));
-	}
-	
-	@DeleteMapping("/{id}")
-	public void delete(@PathVariable Long id) {
-		repository.deleteById(id);
-	}
+//	@PostMapping
+//	public ResponseEntity<Projeto> post(@RequestBody Projeto projeto){
+//		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(projeto));
+//	}
+//	
+//	@PutMapping
+//	public ResponseEntity<Projeto> put(@RequestBody Projeto projeto){
+//		return ResponseEntity.status(HttpStatus.OK).body(repository.save(projeto));
+//	}
+//	
+//	@DeleteMapping("/{id}")
+//	public void delete(@PathVariable Long id) {
+//		repository.deleteById(id);
+//	}
 	
 }

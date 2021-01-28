@@ -31,19 +31,19 @@ public class ImagemController {
 		return ResponseEntity.ok(repository.findAll());
 	}
 	
-	@PostMapping
-	public ResponseEntity<Imagem> post(@RequestBody Imagem imagem){
-		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(imagem));
-	}
-	
-	@PutMapping
-	public ResponseEntity<Imagem> put(@RequestBody Imagem imagem){
-		return ResponseEntity.status(HttpStatus.OK).body(repository.save(imagem));
-	}
-	
-	@DeleteMapping("/{id}")
-	public void delete(@PathVariable Long id) {
-		repository.deleteById(id);
-	}
+//	@PostMapping
+//	public ResponseEntity<Imagem> post(@RequestBody Imagem imagem){
+//		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(imagem));
+//	}
+//	
+//	@PutMapping
+//	public ResponseEntity<Imagem> put(@RequestBody Imagem imagem){
+//		return ResponseEntity.status(HttpStatus.OK).body(repository.save(imagem));
+//	}
+//	
+//	@DeleteMapping("/{id}")
+//	public void delete(@PathVariable Long id) {
+//		repository.deleteById(id);
+//	}
 	
 }
