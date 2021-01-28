@@ -1,0 +1,60 @@
+.digitar {
+    border-right: 2px solid rgba(0,0,0, .75);
+    font-size: 30pt;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.typing-animation {
+    animation: blinkCursor steps(40) 500ms infinite normal,
+     typing 2s steps(25) 1s normal both;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 10em;
+    }
+}
+
+@keyframes blinkCursor {
+    from {
+        border-right-color: #3C4152;
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+/* Animação subTitulo */
+.textDigitar {
+    border-right: 2px solid rgba(0,0,0, .75);
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+}
+
+.typing-animation-sub {
+    animation: blinkCursorSub steps(40) 500ms infinite normal,
+    typingSub 2s steps(25) 3s normal both;
+}
+
+@keyframes typingSub {
+    from {
+        width: 0;
+    }
+    to {
+        width: 16.5em;
+    }
+}
+
+@keyframes blinkCursorSub {
+    from {
+        border-right-color: #3C4152;
+    }
+    to {
+        border-right-color: transparent;
+    }
+}

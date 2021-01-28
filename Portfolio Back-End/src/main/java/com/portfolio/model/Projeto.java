@@ -25,6 +25,9 @@ public class Projeto {
 	private String titulo;
 	
 	@NotNull
+	private String imgPrincipal;
+	
+	@NotNull
 	private String descricao;
 	
 	@OneToMany(mappedBy = "projeto", cascade = CascadeType.ALL)
@@ -73,6 +76,14 @@ public class Projeto {
 
 	public void setLinguagens(List<Linguagem> linguagens) {
 		this.linguagens = linguagens;
+	}
+
+	public String getImgPrincipal() {
+		return imgPrincipal;
+	}
+
+	public void setImgPrincipal(String imgPrincipal) {
+		this.imgPrincipal = imgPrincipal;
 	}
 	
 }
