@@ -1,17 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
-
 * {
     color: #3C4152;
 }
 
 body, html {
-    height: 100%;
-    font-family: 'Rubik', sans-serif;
+    height: 100%;    
+    scroll-behavior: smooth;
 }
 
 a{
     color: #3C4152;
-    font-family: 'Rubik', sans-serif;
+    font-family: sans-serif;
 }
 
 a:hover {
