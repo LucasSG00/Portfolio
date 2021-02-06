@@ -1,46 +1,54 @@
-<div class="container-fluid" style="height: 87vh">
+<div class="container-fuild back">
 
-    <div class="row d-flex align-items-center h-100 d-inline-block">
-        <div class="col-md-12 rounded-circle">
 
-            <div class="row d-flex justify-content-center">
-                <img src="https://i.imgur.com/YxQqQfp.png" class="rounded mx-auto d-block rounded-circle" alt=""
-                    width="150px">
 
-            </div>
+    <div class="container d-flex align-items-center" style="height: 100vh">
 
-            <div class="row d-flex justify-content-center">
-                <h1>Projetos</h1>
-            </div>
+        <div class="row d-flex align-items-center d-inline-block mt-5">
+            <div class="col-md-12 rounded-circle">
 
-            <div class="row d-flex justify-content-center my-4">
-                <div class="col-md-3">
-                    <p class="font-weight-bold text">
-                        Desde pequeno sempre gostei muito da área de tecnologia e ao ir pesquisando sobre, acabei
-                        ficando apaixonado por programação e inteligência artificial e as milhares de possibilidades que
-                        ambas podem proporcionar.
-                    </p>
+                <div class="row d-flex justify-content-center">
+                    <img src="https://i.imgur.com/ji8jpfI.png" class="rounded mx-auto d-block rounded-circle" alt=""
+                        width="170px">
+
                 </div>
+
+                <div class="row d-flex justify-content-center mt-3 mb-1">
+                    <h1>Projetos</h1>
+                </div>
+
+                <div class="row d-flex justify-content-center">
+                    <div class="col-md-4">
+                        <p class="font-weight-bold text text-center mb-5">
+                            Desde pequeno sempre gostei muito da área de tecnologia e ao ir pesquisando sobre, acabei
+                            ficando apaixonado por programação e inteligência artificial e as milhares de possibilidades
+                            que
+                            ambas podem proporcionar.
+                        </p>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center mt-5">
+                    <a class="font-italic text-white" href="#projetos">Rolar para baixo</a>
+                </div>
+
             </div>
 
         </div>
+
+
     </div>
+    <!-- *ngFor='let card of listaProjetos' -->
+    <div class="row d-flex justify-content-center w-100 my-5 anime" id="projetos">
 
-    <div class="row d-flex justify-content-center">
-        <a class="font-italic text-secondary" href="#projetos">Rolar para baixo</a>
-    </div>
+        <div class="col-md-4 py-4">
+            <h3 class="card-title text-center">{{ card.titulo }}</h3>
+            <p class="card-text align-middle text">{{ card.descricao }} </p>
+        </div>
 
-</div>
+        <div class="col-md-4 d-flex justify-content-center">
+            <img class="mh-100 mw-100" src="{{ card.imgPrincipal }}" alt="">
+        </div>
 
-<div class="row d-flex justify-content-center w-100 my-5" id="projetos" *ngFor='let card of listaProjetos'>
-
-    <div class="col-md-4 py-4">
-        <h3 class="card-title text-center">{{ card.titulo }}</h3>
-        <p class="card-text align-middle text">{{ card.descricao }} </p>
-    </div>
-
-    <div class="col-md-4 d-flex justify-content-center" >
-        <img class="mh-100 mw-100" src="{{ card.imgPrincipal }}" alt="">
     </div>
 
 </div>

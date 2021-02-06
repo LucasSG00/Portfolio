@@ -1,5 +1,5 @@
 * {
-    color: #3C4152;
+    color: black;
     font-family: 'Special Elite', cursive;
 }
 
@@ -9,12 +9,12 @@ body, html {
 }
 
 a{
-    color: #3C4152;
+    color: black;
 }
 
 a:hover {
     text-decoration: none;
-    color: #3C4152;
+    color: black;
 }
 
 .text {

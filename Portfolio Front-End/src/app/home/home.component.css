@@ -1,5 +1,5 @@
+/* Animação Titulo */
 .digitar {
-    border-right: 2px solid rgba(0,0,0, .75);
     font-size: 30pt;
     white-space: nowrap;
     overflow: hidden;
@@ -7,7 +7,7 @@
 
 .typing-animation {
     animation: blinkCursor steps(40) 500ms infinite normal,
-     typing 2s steps(25) 1s normal both;
+     typing 2s steps(25) .5s normal both;
 }
 
 @keyframes typing {
@@ -21,7 +21,7 @@
 
 @keyframes blinkCursor {
     from {
-        border-right-color: #3C4152;
+        border-right-color: black;
     }
     to {
         border-right-color: transparent;
@@ -30,7 +30,6 @@
 
 /* Animação subTitulo */
 .textDigitar {
-    border-right: 2px solid rgba(0,0,0, .75);
     white-space: nowrap;
     overflow: hidden;
     text-align: center;
@@ -46,15 +45,35 @@
         width: 0;
     }
     to {
-        width: 16.5em;
+        width: 17em;
     }
 }
 
 @keyframes blinkCursorSub {
     from {
-        border-right-color: #3C4152;
+        border-right-color: black;
     }
     to {
         border-right-color: transparent;
+    }
+}
+
+/* Animação Fundo */
+
+.back {
+    background: linear-gradient(45deg, #005478, #0095D6, #BF6600, #753F00);
+    background-size: 200% 200%;
+    animation: colors 12s ease infinite;
+}
+
+@keyframes colors{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
     }
 }

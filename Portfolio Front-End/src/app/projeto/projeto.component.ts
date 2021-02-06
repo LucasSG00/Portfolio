@@ -10,6 +10,7 @@ import { ProjetoService } from '../service/projeto.service';
 })
 export class ProjetoComponent implements OnInit {
 
+
   listaProjetos: Projeto[]
 
   constructor(
@@ -19,6 +20,9 @@ export class ProjetoComponent implements OnInit {
 
   ngOnInit(): void {
     this.findAll()
+
+    
+
   }
 
   findAll(){
