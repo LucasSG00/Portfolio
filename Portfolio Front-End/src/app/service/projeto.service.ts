@@ -14,4 +14,8 @@ export class ProjetoService {
     return this.http.get<Projeto[]>('http://localhost:8080/projeto')
   }
 
+  getByIdProjeto(id: number):Observable<Projeto>{
+    return this.http.get<Projeto>(`http://localhost:8080/projeto/id/${id}`)
+  }
+
 }

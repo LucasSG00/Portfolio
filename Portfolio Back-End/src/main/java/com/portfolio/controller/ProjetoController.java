@@ -31,6 +31,13 @@ public class ProjetoController {
 		return ResponseEntity.ok(repository.findAll());
 	}
 	
+	@GetMapping ("/id/{id}")
+	public ResponseEntity <Projeto> GetById(@PathVariable Long id){	
+		return repository.findById(id)
+				.map(resp -> ResponseEntity.ok(resp))
+				.orElse(ResponseEntity.notFound().build());
+	}
+	
 	@GetMapping("/titulo/{titulo}")
 	public ResponseEntity<List<Projeto>> GetByIdTitulo(@PathVariable String titulo){
 		return ResponseEntity.ok(repository.findAllByTituloContainingIgnoreCase(titulo));

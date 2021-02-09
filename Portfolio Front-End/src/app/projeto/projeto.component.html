@@ -1,4 +1,4 @@
-<div class="container-fuild back">
+<div class="container-fluid back p-0" width="100vh">
 
 
 
@@ -8,18 +8,19 @@
             <div class="col-md-12 rounded-circle">
 
                 <div class="row d-flex justify-content-center">
-                    <img src="https://i.imgur.com/ji8jpfI.png" class="rounded mx-auto d-block rounded-circle" alt=""
-                        width="170px">
-
+                    <div class="col-md-4">
+                        <img src="https://i.imgur.com/ji8jpfI.png" class="rounded mx-auto d-block rounded-circle" alt=""
+                            width="170px">
+                    </div>
                 </div>
 
                 <div class="row d-flex justify-content-center mt-3 mb-1">
-                    <h1>Projetos</h1>
+                    <h1 class="text-white">Projetos</h1>
                 </div>
 
                 <div class="row d-flex justify-content-center">
                     <div class="col-md-4">
-                        <p class="font-weight-bold text text-center mb-5">
+                        <p class="font-weight-bold text text-center text-white mb-5">
                             Desde pequeno sempre gostei muito da área de tecnologia e ao ir pesquisando sobre, acabei
                             ficando apaixonado por programação e inteligência artificial e as milhares de possibilidades
                             que
@@ -37,18 +38,51 @@
 
 
     </div>
-    <!-- *ngFor='let card of listaProjetos' -->
-    <div class="row d-flex justify-content-center w-100 my-5 anime" id="projetos">
 
-        <div class="col-md-4 py-4">
-            <h3 class="card-title text-center">{{ card.titulo }}</h3>
-            <p class="card-text align-middle text">{{ card.descricao }} </p>
+    <div class="row w-100 anime d-flex justify-content-center m-0 imagem-projeto border-bottom border-secondary"
+        id="projetos" *ngFor='let card of listaProjetos' data-toggle="modal" data-target="#projeto"
+        (click)="mostraModal(card.idProjeto)">
+
+
+
+        <div class="col-md-6 p-0 ">
+            <img class="text-white" src="{{ card.imgPrincipal }}" alt="" style="height: 500px; width: 100%;">
         </div>
 
-        <div class="col-md-4 d-flex justify-content-center">
-            <img class="mh-100 mw-100" src="{{ card.imgPrincipal }}" alt="">
+        <div class="col-md-6 m-0 py-5 px-5 back-descricao">
+            <h3 class="card-title text-center text-white">{{ card.titulo }}</h3>
+            <p class="card-text d-flex justify-content-center text text-center text-white">{{ card.descricao }} </p>
         </div>
 
     </div>
 
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="projeto" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content" style="background-color: black;">
+            <div class="modal-header">
+                <h3 class="modal-title text-center text-white" id="TituloModal">{{ projeto.titulo }}</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span class="text-white" aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-white px-5 text-center">
+                <p class="text-white" >{{ projeto.descricao }}</p>
+                <div class="d-flex flex-row bd-highlight justify-content-center my-5">
+                    <ul class="nav justify-content-end" *ngFor="let linguagem of listaLinguagens">
+                        <li class="nav-item bd-highlight mr-2 d-flex align-items-center">
+                            <a class="btn btn-sm btn-outline-secondary border-0 align-middle text-white" style="width: 150px; font-size: 16pt">{{
+                                linguagem.nome }}</a>
+                        </li>
+                    </ul>
+                </div>
+                <img *ngFor="let modal of listaImagens" src="{{ modal.link }}" alt="Imagens do projeto"
+                    style="height: 500px; width: 70%;">
+                
+            </div>
+        </div>
+    </div>
 </div>

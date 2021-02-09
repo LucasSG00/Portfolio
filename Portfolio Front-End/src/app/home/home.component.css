@@ -7,7 +7,7 @@
 
 .typing-animation {
     animation: blinkCursor steps(40) 500ms infinite normal,
-     typing 2s steps(25) .5s normal both;
+     typing 2s steps(25) 3s normal both;
 }
 
 @keyframes typing {
@@ -37,7 +37,7 @@
 
 .typing-animation-sub {
     animation: blinkCursorSub steps(40) 500ms infinite normal,
-    typingSub 2s steps(25) 3s normal both;
+    typingSub 2s steps(25) 5s normal both;
 }
 
 @keyframes typingSub {
@@ -75,5 +75,70 @@
     }
     100%{
         background-position: 0% 50%;
+    }
+}
+
+/* Animação imagem */
+.perfil {
+    overflow: hidden;
+    line-height: 1;
+}
+
+.perfil img {
+    display: block;
+    animation: reveal 4s cubic-bezier(0.70, 0, 0.175, 1) 0.1s;
+}
+
+@keyframes reveal {
+    0% {
+      transform: translate(0,100%);
+    }
+    100% {
+      transform: translate(0,0);
+    }
+  }
+
+/* Animação de Caixa */
+.texto-caixa {
+    position: relative;
+    overflow: hidden;
+}
+
+.texto-caixa:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#0095D6;
+    transform: translateX(-100%);
+    animation: enlargeBlock .4s .1s both, revealBlock 1s 1s both;
+}
+
+@keyframes revealBlock {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes enlargeBlock {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes fadeInText{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
