@@ -1,8 +1,8 @@
-<div class="container-fluid back p-0" width="100vh">
+<div class="container-fluid back p-0 texto-caixa" width="100vh">
 
 
 
-    <div class="container d-flex align-items-center" style="height: 100vh">
+    <div class="container d-flex align-items-center caixa" style="height: 100vh">
 
         <div class="row d-flex align-items-center d-inline-block mt-5">
             <div class="col-md-12 rounded-circle">
@@ -29,7 +29,9 @@
                     </div>
                 </div>
                 <div class="row d-flex justify-content-center mt-5">
-                    <a class="font-italic text-white" href="#projetos">Rolar para baixo</a>
+                    <a href="#projetos">
+                        <i class="fa fa-arrow-circle-down fa-2x text-white"  aria-hidden="true"></i>
+                    </a>
                 </div>
 
             </div>
@@ -39,19 +41,23 @@
 
     </div>
 
-    <div class="row w-100 anime d-flex justify-content-center m-0 imagem-projeto border-bottom border-secondary"
-        id="projetos" *ngFor='let card of listaProjetos' data-toggle="modal" data-target="#projeto"
+    <div class="row w-100 mb-1 anime d-flex justify-content-center m-0 imagem-projeto border-bottom border-secondary caixa"
+        id="projetos" *ngFor='let card of listaProjetos' data-toggle="modal" data-target="#projetoModal"
         (click)="mostraModal(card.idProjeto)">
 
 
 
         <div class="col-md-6 p-0 ">
-            <img class="text-white" src="{{ card.imgPrincipal }}" alt="" style="height: 500px; width: 100%;">
+            <img class="text-white" src="{{ card.imgPrincipal }}" alt="" style="max-height: 500px; width: 100%;">
         </div>
 
-        <div class="col-md-6 m-0 py-5 px-5 back-descricao">
-            <h3 class="card-title text-center text-white">{{ card.titulo }}</h3>
+        <div class="col-md-6 m-0 py-5 px-5 back-descricao d-flex align-items-center">
+            <div class="row">
+
+            
+            <h3 class="card-title text-center text-white ">{{ card.titulo }}</h3>
             <p class="card-text d-flex justify-content-center text text-center text-white">{{ card.descricao }} </p>
+        </div>
         </div>
 
     </div>
@@ -59,9 +65,9 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="projeto" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+<div class="modal fade" id="projetoModal" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
     aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
         <div class="modal-content" style="background-color: black;">
             <div class="modal-header">
                 <h3 class="modal-title text-center text-white" id="TituloModal">{{ projeto.titulo }}</h3>
@@ -70,7 +76,7 @@
                 </button>
             </div>
             <div class="modal-body text-white px-5 text-center">
-                <p class="text-white" >{{ projeto.descricao }}</p>
+                <p class="text-white" style="font-size: 18pt">{{ projeto.descricao }}</p>
                 <div class="d-flex flex-row bd-highlight justify-content-center my-5">
                     <ul class="nav justify-content-end" *ngFor="let linguagem of listaLinguagens">
                         <li class="nav-item bd-highlight mr-2 d-flex align-items-center">
@@ -79,8 +85,8 @@
                         </li>
                     </ul>
                 </div>
-                <img *ngFor="let modal of listaImagens" src="{{ modal.link }}" alt="Imagens do projeto"
-                    style="height: 500px; width: 70%;">
+                <img class="mb-2" *ngFor="let modal of listaImagens" src="{{ modal.link }}" alt="Imagens do projeto"
+                    style="width: 100%;">
                 
             </div>
         </div>

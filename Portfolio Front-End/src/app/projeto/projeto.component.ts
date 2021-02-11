@@ -18,6 +18,7 @@ export class ProjetoComponent implements OnInit {
   listaImagens: Imagem[]
   listaLinguagens: Linguagem[]
 
+
   constructor(
     private router: Router,
     private projetoService: ProjetoService
@@ -26,14 +27,11 @@ export class ProjetoComponent implements OnInit {
   ngOnInit(): void {
     this.findAll()
 
-    
-
   }
 
   findAll(){
     this.projetoService.getAllProjeto().subscribe((resp: Projeto[]) => {
       this.listaProjetos = resp
-      console.log(this.listaProjetos)
     })
   }
 
@@ -42,7 +40,6 @@ export class ProjetoComponent implements OnInit {
       this.listaImagens = resp.imagens
       this.listaLinguagens = resp.linguagens
       this.projeto = resp
-      console.log(this.projeto)
     })
   }
 

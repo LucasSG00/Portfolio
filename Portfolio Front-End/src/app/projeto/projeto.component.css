@@ -4,6 +4,10 @@
     animation: colors 12s ease infinite;
 }
 
+.fa-arrow-circle-down:hover {
+    transform: scale(1.1);
+}
+
 @keyframes colors{
     0%{
         background-position: 0% 50%;
@@ -17,9 +21,58 @@
 }
 
 .imagem-projeto:hover {
-    transform: scale(1.03)
+    transform: scale(0.99)
 }
 
 .back-descricao {
     background-color: black;
+}
+
+.caixa {
+    opacity: 0;
+    animation: fadeInText 0s 1.1s both;
+}
+
+.texto-caixa {
+    position: relative;
+    overflow: hidden;
+}
+
+.texto-caixa:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#0095D6;
+    transform: translateX(-100%);
+    animation: enlargeBlock .5s .1s both, revealBlock .4s 1s both;
+}
+
+@keyframes revealBlock {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes enlargeBlock {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes fadeInText{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
