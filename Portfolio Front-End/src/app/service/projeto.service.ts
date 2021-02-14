@@ -10,6 +10,8 @@ export class ProjetoService {
 
   constructor(private http: HttpClient) { }
 
+  // https://lucassg.herokuapp.com
+
   getAllProjeto(): Observable<Projeto[]>{
     return this.http.get<Projeto[]>('http://localhost:8080/projeto')
   }
