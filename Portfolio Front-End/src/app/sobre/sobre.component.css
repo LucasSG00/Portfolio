@@ -53,3 +53,25 @@
         opacity: 1;
     }
 }
+
+@media (max-width: 414px) {
+    .container-fluid {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .texto-caixa {
+        text-align: center;
+    }
+    .formacao {
+        margin: 25% 2% 0 2%;
+        padding: 3%;
+    }
+    .formacao h2 {
+        font-size: 14pt;
+    }
+    .sobre p {
+        padding: 2% ;
+        font-size: 12pt;
+        margin: 0;
+    }
+}

@@ -80,3 +80,12 @@ input, textarea {
         opacity: 1;
     }
 }
+
+@media (max-width: 414px) {
+    .icones {
+        margin-top: 20%;
+        display: flex;
+        flex-flow:row;
+        justify-content: space-evenly;
+    }
+}
