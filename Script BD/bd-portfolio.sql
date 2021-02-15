@@ -30,7 +30,7 @@ insert into tb_imagem values (default, 'https://i.imgur.com/GFwThQS.png', 'Filtr
 insert into tb_imagem values (default, 'https://i.imgur.com/3bcGhbr.png', 'Atualizar', 2);
 insert into tb_imagem values (default, 'https://i.imgur.com/68uj8Pw.png', 'Deletar', 2);
 
-insert into tb_projeto values (default, 'O projeto consiste em uma aplicação Web que gerencia pedidos de pizzas para um determinada localização utilizando o mapeamento através da biblioteca Leaflet do React.', 'https://i.imgur.com/s2xfdbS.png', 'DsDeliver');
+insert into tb_projeto values (default, 'O projeto consiste em uma aplicação Web que gerencia pedidos de pizzas para um determinada localização utilizando o mapeamento através da biblioteca Leaflet do React.', 'https://i.imgur.com/RWE75LD.png', 'DsDeliver');
 insert into tb_linguagem values (default, 'HTML', 3);
 insert into tb_linguagem values (default, 'CSS', 3);
 insert into tb_linguagem values (default, 'React', 3);

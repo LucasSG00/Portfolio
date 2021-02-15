@@ -86,3 +86,18 @@
         max-height: 30%;
     }
 }
+
+@media (max-width: 375px) {
+    .container{
+        margin-top: 3%;
+    }
+}
+
+@media (max-width: 320px) {
+    .fa-arrow-circle-down {
+        display: none;
+    }
+    .container p {
+        font-size: 12pt;
+    }
+}

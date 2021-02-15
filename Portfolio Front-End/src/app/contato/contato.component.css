@@ -89,3 +89,9 @@ input, textarea {
         justify-content: space-evenly;
     }
 }
+
+@media (max-width: 320px) {
+    .icones i {
+        font-size: 38pt;
+    }
+}
