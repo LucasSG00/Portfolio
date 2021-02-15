@@ -76,3 +76,13 @@
         opacity: 1;
     }
 }
+
+@media (max-width: 414px) {
+    #projetos {
+        margin-bottom: 5%!important;
+    }
+
+    #projetos img {
+        max-height: 30%;
+    }
+}

@@ -43,18 +43,16 @@
         (click)="mostraModal(card.idProjeto)">
 
 
-
+    
         <div class="col-md-6 p-0 ">
             <img class="text-white" src="{{ card.imgPrincipal }}" alt="" style="max-height: 500px; width: 100%;">
         </div>
 
-        <div class="col-md-6 m-0 py-5 px-5 back-descricao d-flex align-items-center">
+        <div class="col-md-6 m-0 py-5 px-5 back-descricao d-flex align-items-center ">
             <div class="row">
-
-            
-            <h3 class="card-title text-center text-white ">{{ card.titulo }}</h3>
-            <p class="card-text d-flex justify-content-center text text-center text-white">{{ card.descricao }} </p>
-        </div>
+                <h3 class="card-title text-center text-white ">{{ card.titulo }}</h3>
+                <p class="card-text d-flex justify-content-center text text-center text-white">{{ card.descricao }} </p>
+            </div>
         </div>
 
     </div>
@@ -75,8 +73,8 @@
             <div class="modal-body text-white px-5 text-center">
                 <p class="text-white" style="font-size: 18pt">{{ projeto.descricao }}</p>
                 <div class="d-flex flex-row bd-highlight justify-content-center my-5">
-                    <ul class="nav justify-content-end" *ngFor="let linguagem of listaLinguagens">
-                        <li class="nav-item bd-highlight mr-2 d-flex align-items-center">
+                    <ul class="nav justify-content-center w-75">
+                        <li class="nav-item bd-highlight mr-2 d-flex align-items-center"  *ngFor="let linguagem of listaLinguagens">
                             <a class="btn btn-sm btn-outline-secondary border-0 align-middle text-white" style="width: 150px; font-size: 16pt">{{
                                 linguagem.nome }}</a>
                         </li>
